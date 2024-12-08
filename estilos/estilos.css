@@ -1,0 +1,1015 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: scroll;
+}
+body.mainhtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/fondo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body.caminohtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/camino.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body.bastionhtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/bastion.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body.contactohtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/contacto.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body.guiahtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/invo.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+body.torrehtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/torre.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+body.virtualhtml {
+  cursor: url('../images/FFXII_LB_Cursor.png'), auto;
+  background-image: url(../images/virtual.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+a, button {
+  cursor: url('../images/FFXII_LB_Cursor.png'), pointer; 
+}
+
+a:hover, button:hover {
+  cursor: url('../images/FFXII_LB_Cursor.png'), pointer; 
+}
+
+a:active, button:active {
+  cursor: url('../images/FFXII_LB_Cursor.png'), pointer;
+}
+
+
+:root {
+  --color-primario: #79ACD9;
+  --color-secundario: #EB803D;
+  --color-hover: #608C5E;
+  --color-detalle: #14260F; 
+  --color-fondo-secundario: #F2DBAE; 
+  --color-suave: #735565; 
+}
+
+
+@font-face {
+  font-family: 'finalfig';
+  src: url('../fuentes/FinalFantasyElements-XJJo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'finalf';
+  src: url('../fuentes/ferrum.otf') format('truetype');
+}
+@font-face {
+  font-family: 'jenson';
+  src: url('../fuentes/adobe-jenson-pro-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'tngan';
+  src: url('../fuentes/tngan.ttf') format('truetype');
+}
+
+.header-container {
+  max-width: 1400px; 
+  width: 100%;      
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header.caminoheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/camino.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%;
+}
+
+header.bastionheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/bastion.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%; 
+}
+
+header.mainheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%; 
+}
+header.contactoheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/contacto.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%; 
+}
+header.guiaheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/invo.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%; 
+}
+header.torreheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/torre.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%; 
+}
+header.virtualheader {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-image: url(../images/virtual.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%;
+}
+
+.menu-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'finalf';
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black; 
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+.big-letter {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.cara {
+  font-family: 'finalfig';
+  color: white;
+  font-size: 3rem;
+  text-decoration: none !important;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black; /* Borde negro */
+}
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black; 
+}
+
+nav ul li {
+  margin-left: 30px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black; 
+  text-decoration: none; 
+  font-family: 'finalf';
+  font-size: 1.6em;
+  position: relative;
+}
+
+nav ul li a.linea::after{
+  content: ""; 
+  position: absolute;
+  left: 0;
+  bottom: -3px; 
+  width: 0;
+  height: 2px;
+  background-color: white; 
+  transition: width 0.3s ease-out; 
+}
+
+nav ul li a.linea:hover::after {
+  width: 100%; 
+}
+
+/* Submenús */
+.submenu {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: var(--color-primario);
+  padding: 10px;
+  border: solid rgb(0, 0, 0);
+  border-image: conic-gradient(#00f, #0ff, #f0f, #ff0, #00f) 1;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  z-index: 10;
+}
+
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.submenu li a {
+  font-family: 'jenson';
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0), 0 0 25px rgba(0, 0, 0, 0), 0 0 5px rgba(0, 0, 0, 0); /* Borde negro */
+}
+
+.submenu li a:hover {
+  color: white;
+}
+
+
+main {
+  padding-top: 120px; 
+  padding-bottom: 50px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Section */
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 10px;
+  border: 10px solid transparent; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  z-index: 500;
+  min-height: 70vh;
+  text-align: right;
+  border-image: conic-gradient(#00f, #0ff, #f0f, #ff0, #00f) 1;
+
+}
+
+section.intro {
+  text-align: center; 
+  font-family: 'jenson';
+  font-size: 1.2rem;
+  color: white;
+}
+
+section a {
+  margin-top: 20px;
+  color: white;
+}
+
+section .imgintro {
+  border: solid white;
+  margin-top: 50px;
+  width: 100vh;
+  height: 40vh;
+  object-fit: cover;
+}
+
+section .iconos {
+  width: 40px;
+  filter: invert(1); 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+section h2 {
+  font-family: 'finalf';
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: underline; 
+  text-decoration-color: white; 
+}
+
+
+.camino-del-heroe p {
+  font-family: 'jenson';
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.5;
+  margin-left: 2vh; 
+  margin-right: 2vh; 
+}
+
+.bastion p {
+  font-family: 'jenson';
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.5;
+  margin-left: 2vh;
+  margin-right: 1vh; 
+}
+
+section.bastion,
+section.camino-del-heroe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto; 
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+section.bastion {
+  flex-direction: row-reverse;
+}
+
+section.camino-del-heroe {
+  flex-direction: row;
+}
+
+section.bastion .imgsecciones img,
+section.camino-del-heroe .imgsecciones img {
+  border: solid white;
+  width: 60vh; 
+  height: 50vh;
+  object-fit: cover;
+  margin-right: 20px; 
+}
+
+section.camino-del-heroe .texto,
+section.bastion .texto {
+  flex: 1;
+  font-family: 'jenson';
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.5;
+}
+
+section.camino-del-heroe .texto{
+  text-align: left;
+}
+
+section.camino-del-heroe .texto h2{
+  margin-left: 10px;
+}
+
+a.botonseccion {
+  font-family: 'jenson';
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#79ACD9;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease; 
+  border: solid white;
+}
+
+a.botonseccion:hover {
+  background-color: black; 
+  color: white;
+  border: solid white;
+
+}
+.botonseccion img{
+  width: 20px;
+  transition: filter 0.3s ease;
+  margin-left: 5px;
+}
+a.botonseccion:hover img {
+  filter: invert(1);
+}
+input, button{
+  font-family: 'jenson';
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#79ACD9;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none; 
+  transition: background-color 0.3s ease; 
+  border: solid white;
+}
+
+input:hover {
+  background-color: black; 
+  color: white;
+  border: solid white;
+
+}
+button:hover {
+  background-color: black; 
+  color: white;
+  border: solid white;
+
+}
+input img{
+  width: 20px;
+  transition: filter 0.3s ease;
+  margin-left: 5px;
+}
+input img {
+  filter: invert(1);
+}
+
+.imgsecciones img{
+  transition: all 0.3s ease; 
+}
+
+.imgsecciones:hover img{
+  filter: brightness(1); 
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); 
+}
+
+img.imgintro {
+  transition: all 0.3s ease;
+}
+
+img.imgintro:hover {
+  filter: brightness(1); 
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+
+footer {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0; 
+  z-index: 1000;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0.4%;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1400px;
+  width: 100%;       
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); 
+  z-index: -1;
+}
+
+
+/* CAMINO */
+section.dividido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px; 
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Division interna */
+section.dividido .izquierda, 
+section.dividido .derecha {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+}
+
+section.dividido .derecha {
+  align-items: center;
+}
+
+
+section.dividido h2 {
+  font-family: 'finalf';
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-align: center; 
+}
+
+
+section.dividido .imgintro {
+  width: 50vh;
+  height: 30vh;
+  max-width: auto ;
+  margin: 20px 0;
+  border: solid white 3px;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+section.dividido .imgintro:hover {
+  filter: brightness(1);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+
+.invocaciones {
+  text-align: center;
+  padding: 20px;
+}
+
+.invocaciones h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.invocaciones p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ffffff; 
+}
+
+.fila-imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.invocacion {
+  font-family: 'jenson';
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.invocacion img {
+  width: 20vh;
+  height: 20vh;
+  object-fit: cover; 
+  border: 4px solid transparent;
+  background: linear-gradient(45deg, #00f, #0ff, #f0f, #ff0, #00f);
+  background-size: 300% 300%;
+  background-clip: border-box; 
+  -webkit-background-clip: border-box;
+  animation: flujo-continuo 5s linear infinite alternate; 
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.invocacion img:hover {
+  transform: scale(1.5);
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+.alianzas img {
+  margin-right: 30px;
+  width: 30vh;
+  height: 60vh;
+  object-fit: cover; 
+  border: 4px solid transparent; 
+  background: linear-gradient(45deg, #00f, #0ff, #f0f, #ff0, #00f); 
+  background-size: 300% 300%; 
+  background-clip: border-box; 
+  -webkit-background-clip: border-box;
+  animation: flujo-continuo 5s linear infinite alternate; 
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alianzas img:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); 
+}
+
+.arcane img {
+  width: 20vh;
+  height: 20vh;
+  object-fit: cover; 
+  border: 4px solid white;
+  background: linear-gradient(45deg, #00f, #0ff, #f0f, #ff0, #00f); 
+  background-size: 300% 300%; 
+  background-clip: border-box; 
+  -webkit-background-clip: border-box;
+  animation: flujo-continuo 5s linear infinite alternate; 
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arcane img:hover {
+  transform: scale(1.5); 
+  filter: brightness(1.2); 
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); 
+}
+
+.arcane span {
+  display: block;
+  margin-top: 5px;
+  color: #eee; 
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.alianzas span {
+  display: block;
+  margin-top: 5px;
+  color: #eee; 
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 30px;
+}
+
+@keyframes flujo-continuo {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.invocacion span {
+  display: block;
+  margin-top: 5px;
+  color: #eee;
+  font-weight: bold;
+}
+
+.alianzas span {
+  display: block;
+  margin-top: 5px;
+  color: #eee; 
+  font-weight: bold;
+}
+
+
+
+/* Botones */
+section.dividido a.botonseccion {
+  font-family: 'jenson';
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #79ACD9;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: solid white 3px;
+}
+
+section.dividido a.botonseccion:hover {
+  background-color: black;
+  color: white;
+  border: solid white 3px;
+}
+
+/* Iconos */
+section.dividido .iconos {
+  width: 40px;
+  filter: invert(1);
+}
+
+/* Texto */
+section.dividido p {
+  font-family: 'jenson';
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.5;
+  text-align: center; 
+  margin: 10px 0;
+}
+section.dividido a.botonseccion {
+  margin: 0 auto;
+}
+
+.elfico{
+  font-family: 'tngan';
+  transition: all 0.3s ease; 
+  font-size: 1.2rem;
+}
+
+.elfico:hover {
+  font-family: 'jenson'; 
+  color: #ffffff; 
+  text-shadow: 0 0 3px #ffffff3b, 0 0 15px #ffffff3b, 0 0 20px #ffffff3b; 
+  font-size: 1.2rem;
+}
+
+
+
+
+/*juego*/
+#zona-juego {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.simbolo {
+  width: 10vh;
+  height: 10vh;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: #444; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s; 
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+
+.simbolo:hover {
+  transform: scale(1.1);
+}
+
+#circulo {
+  background-color: #00f; 
+}
+
+#triangulo {
+  background-color: #0ff; 
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+#estrella {
+  background-color: #f0f; 
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+#cuadrado {
+  background-color: #ff0; 
+}
+
+.simbolo.activo {
+  transform: scale(1.2);
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.alerta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 0, 0); 
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'PressStart2P-Regular', sans-serif;
+  display: none; 
+  z-index: 1000;
+}
+
+.borde-arcoiris {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 5px solid transparent;
+  background: conic-gradient(rgba(0, 0, 255, 0.259), rgba(0, 255, 255, 0.299), rgba(255, 0, 255, 0.316), rgba(255, 255, 0, 0.299), rgba(0, 0, 255, 0.202)); /* El borde arcoíris */
+  z-index: -1;
+}
+
+.alerta button {
+  font-family: 'jenson';
+  background-color:#79ACD9;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 3vh;
+  border: solid white;
+}
+
+.alerta button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.form-estilizado {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-estilizado .campo {
+  margin: 20px 0;
+
+}
+
+.form-estilizado label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-estilizado input,
+.form-estilizado select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+select {
+  background-color:#79ACD9;
+  color: black; 
+  border:white solid 3px;
+  padding: 10px;
+  border-radius: 5px; 
+  font-family: 'jenson'; 
+  font-size: 1.2rem;
+}
+
+select:focus {
+  outline: none;
+
+}
+
+option {
+  background-color:#79ACD9;
+  color: black; 
+  font-family: 'jenson';
+  font-size: 1.2rem;
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.form-estilizado {
+  width: 60%;
+}
+
+
+.mapa img {
+  width: 45vh;
+  height: 57vh;
+  margin: 20px 0;
+  border: solid white 3px;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+.mapa img:hover {
+  filter: brightness(1); 
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); 
+}
+
+.redes img{
+  width: 3vh;
+  margin-left: 1vh;
+}
+
+.footer-container a{
+  text-decoration: none;
+  color: white;
+}
